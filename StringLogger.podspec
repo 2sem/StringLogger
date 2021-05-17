@@ -29,7 +29,7 @@ DESC
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { '2sem' => 'kofggm@gmail.com' }
   s.source           = { :git => 'https://github.com/2sem/StringLogger.git', :tag => s.version.to_s }
-  s.social_media_url = 'https://linkedin.com/in/gamehelper'
+#  s.social_media_url = 'https://linkedin.com/in/gamehelper'
 
   s.ios.deployment_target = '10.0'
 
