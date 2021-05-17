@@ -8,9 +8,9 @@
 
 Pod::Spec.new do |s|
   s.name             = 'StringLogger'
-  s.version          = '0.3'
+  s.version          = '0.4'
   s.summary          = 'Provides Logging with extensions for String'
-  s.swift_versions   = '4.0'
+  s.swift_versions   = '4.2'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -29,7 +29,7 @@ DESC
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { '2sem' => 'kofggm@gmail.com' }
   s.source           = { :git => 'https://github.com/2sem/StringLogger.git', :tag => s.version.to_s }
-   s.social_media_url = 'https://linkedin.com/in/gamehelper'
+  s.social_media_url = 'https://linkedin.com/in/gamehelper'
 
   s.ios.deployment_target = '10.0'
 
