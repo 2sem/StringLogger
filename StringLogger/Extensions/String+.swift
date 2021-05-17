@@ -8,8 +8,9 @@
 
 import Foundation
 
-public extension String{
-    class Logger{
+extension String{
+    open class Logger : NSObject{
+        
         /// Log Level from fatal to trace
         public enum LogLevel : Int{
             case fatal = 0
@@ -38,10 +39,10 @@ public extension String{
                 self.rawValue = rawValue;
             }
             
-            static let file : LogOption = .init(rawValue: 1 << 1);
-            static let line : LogOption = .init(rawValue: 1 << 2);
-            static let function : LogOption = .init(rawValue: 1 << 3);
-            static let date : LogOption = .init(rawValue: 1 << 4);
+            public static let file : LogOption = .init(rawValue: 1 << 1);
+            public static let line : LogOption = .init(rawValue: 1 << 2);
+            public static let function : LogOption = .init(rawValue: 1 << 3);
+            public static let date : LogOption = .init(rawValue: 1 << 4);
             
             public static var `default` : LogOption = [.file, .function, .line, .date];
         }
@@ -81,7 +82,7 @@ public extension String{
         
         /// Register this logger
         /// - Returns: this logger
-        func register() -> Logger{
+        @discardableResult public func register() -> Logger{
             Logger.register(self);
             return self;
         }
@@ -99,7 +100,7 @@ public extension String{
             return level.rawValue <= self.level.rawValue;
         }
         
-        func log(msg: String, level: Logger.LogLevel, option: Logger.LogOption = .default, FILE: String = #file, FUNCTION: String = #function, LINE: Int = #line){
+        open func log(msg: String, level: Logger.LogLevel, option: Logger.LogOption = .default, FILE: String = #file, FUNCTION: String = #function, LINE: Int = #line){
             guard self.canLog(level: level, FILE: FILE, FUNCTION: FUNCTION) else{
                 return;
             }
