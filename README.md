@@ -22,7 +22,7 @@ pod 'StringLogger'
 
 ## Author
 
-2sem, kofsiwon@siwonschool.com
+leesam, toyboy2@hanmail.net
 
 ## License
 
