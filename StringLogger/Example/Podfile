@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'StringLogger_Example' do
+  pod 'StringLogger', :path => '../'
+
+  target 'StringLogger_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
