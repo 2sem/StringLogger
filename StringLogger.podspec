@@ -31,7 +31,7 @@ DESC
   s.source           = { :git => 'https://github.com/2sem/StringLogger.git', :tag => s.version.to_s }
 #  s.social_media_url = 'https://linkedin.com/in/gamehelper'
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '10.0'
 
   s.source_files = 'StringLogger/Extensions/*.swift'
   
