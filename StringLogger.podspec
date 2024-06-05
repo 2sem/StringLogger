@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'StringLogger'
-  s.version          = '0.6'
+  s.version          = '0.7.0'
   s.summary          = 'Provides Logging with extensions for String'
   s.swift_versions   = '4.0'
 
