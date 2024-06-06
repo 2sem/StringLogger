@@ -13,11 +13,35 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
+### Pods
 StringLogger is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
 pod 'StringLogger'
+```
+
+### Swift Package
+
+```swift
+dependencies: [
+  .package(url: "https://github.com/2sem/StringLogger.git",
+           .upToNextMinor(from: "0.7.0"))
+]
+```
+
+### Tuist
+
+```swift
+packages: [...,
+           .remote(url: "https://github.com/2sem/StringLogger", 
+           requirement: .upToNextMajor(from: "0.7.0"))],
+targets: [
+    .target(
+        ...,
+        dependencies: [...,
+                       .package(product: "StringLogger", type: .runtime)
+]
 ```
 
 ## Usages

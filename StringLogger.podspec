@@ -33,7 +33,7 @@ DESC
 
   s.ios.deployment_target = '10.0'
 
-  s.source_files = 'StringLogger/Extensions/*.swift'
+  s.source_files = 'Sources/Extensions/*.swift'
   
   # s.resource_bundles = {
   #   'StringLogger' => ['StringLogger/Assets/*.png']
